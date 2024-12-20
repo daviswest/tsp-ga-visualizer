@@ -98,8 +98,7 @@ function drawRoute(route) {
 
 function displayCoordinates(x, y) {
     ctx.save();
-    ctx.scale(1 / scale, 1 / scale);
-    ctx.fillStyle = 'lightblue';
+    ctx.fillStyle = 'red';
     ctx.font = '16px Roboto';
     ctx.fillText(`(${x.toFixed(2)}, ${y.toFixed(2)})`, x * scale + 10, y * scale - 15);
     ctx.restore();
