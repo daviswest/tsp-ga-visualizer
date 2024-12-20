@@ -1,5 +1,7 @@
 # tsp-ga-visualizer
 
+[Live Demo on GitHub Pages](https://daviswest.github.io/tsp-ga-visualizer)
+
 ## Description
 
 This is an interactive web application that visualizes how a **Genetic Algorithm (GA)** can be used to solve the **Traveling Salesman Problem (TSP)**. The visualizer allows you to see how different parameters (such as population size, mutation rate, elitism rate, and generations) affect the algorithm's ability to find the shortest possible route through a set of cities.
@@ -14,6 +16,21 @@ This is an interactive web application that visualizes how a **Genetic Algorithm
 ### Steps to Run Locally
 
 1. Clone the repository
-2. Open the index.html file with a browser of your choice
+2. Open the index.html file in a browser of your choice
 3. Experiment with different parameters
 
+### Contributing
+
+Pull requests are welcomed and encouraged! To contribute:
+
+1. Fork the repository.
+2. Clone your fork to your local machine.
+3. Make changes and commit them with clear messages.
+4. Push the changes to your fork.
+5. Create a pull request to the main repository.
+
+If you encounter any issues or want to suggest a feature, feel free to open an issue.
+
+### License
+
+This project is licensed under the MIT License.
