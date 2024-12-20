@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>TSP Genetic Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+          <div class="sidebar">
+            <div class="heading">
+              <h1>TSP Genetic Algorithm Visualizer</h1>
+              <i class="fa-solid fa-moon" id="mode-icon"></i>
+              <a href="https://github.com/daviswest/tsp-ga-visualizer" target="_blank" title="View on Github"><i class="fab fa-github"></i></a>
+              <i class="fa-solid fa-circle-info" id="info-icon"></i>
+            </div>
+            <h2>Created by Davis West</h2>
+            <h3>Controls</h3>
+            <div>
+              <label for="numGenerations">Generations:</label>
+              <input type="number" id="numGenerations" value="100" min="10" max="1000">
+            </div>
+            <div>
+                <label for="populationSize">Population Size:</label>
+                <input type="number" id="populationSize" value="100" min="10" max="1000">
+            </div>
+            <div>
+                <label for="mutationRate">Mutation Rate:</label>
+                <input type="number" id="mutationRate" value="0.01" min="0" max="1" step="0.01">
+            </div>
+            <div>
+              <label for="elitismRate">Elitism Rate:</label>
+              <input type="number" id="elitismRate" value="0.01" min="0" max="1" step="0.01">
+          </div>
+            <div class="controls">
+              <button id="startButton">Start Algorithm</button>
+              <button id="resetButton">Reset</button>
+              <button id="clearPointsButton">Clear All Points</button>
+            </div>
+          </div>
+          <div class="visualization">
+            <div class="visualization-message-container"><p id="visualization-message" class="prevent-select"></p></div>
+            <div class="zoom-container">
+              <button id="zoom-in"></button>
+              <button id="zoom-out"></button>
+            </div>
+            <canvas id="canvas"></canvas>
+          </div>
+          <div class="chart-visualization">
+            <canvas id="fitnessChart" width="400" height="100"></canvas>
+          </div>          
+          <div class="table-container">
+            <table id="coordinates-table">
+              <tr>
+                <th>X</th>
+                <th>Y</th>
+              </tr>
+            </table>
+          </div>
+    </div>
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <i class="fa-regular fa-circle-xmark" id="close-btn"></i>
+          <h2>TSP Genetic Algorithm Visualizer</h2>
+          <p>
+              This is a visualizer for the Genetic Algorithm applied to the Traveling Salesman Problem (TSP). It allows you to interactively simulate how the algorithm evolves through generations to find the shortest route that visits all given cities. 
+          </p>
+          <br>
+          <p>
+              The population size and mutation rate can be adjusted to see how they affect the convergence of the algorithm. The genetic algorithm works by selecting two parent routes, crossover to create offspring, and applying mutation to introduce diversity.
+          </p>
+          <br>
+          <p>
+              Feel free to create a pull request <a href="https://github.com/daviswest/tsp-ga-visualizer/pulls" target="_blank" title="View on Github" style="color: green;">here</a>. Create an issue to notify me about bugs or request features <a href="https://github.com/daviswest/tsp-ga-visualizer/issues" target="_blank" title="View on Github" style="color: green;">here</a>.
+          </p>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/geneticAlgorithm.js"></script>
+    <script src="/visualization.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
