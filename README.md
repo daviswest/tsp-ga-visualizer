@@ -4,7 +4,7 @@
 
 ## Description
 
-This is an interactive web application that visualizes how a **Genetic Algorithm (GA)** can be used to solve the **Traveling Salesman Problem (TSP)**. The visualizer allows you to see how different parameters (such as population size, mutation rate, elitism rate, and generations) affect the algorithm's ability to find the shortest possible route through a set of cities.
+This is an interactive web application that visualizes how a **Genetic Algorithm (GA)** can be used to solve the **Traveling Salesperson Problem (TSP)**. The visualizer allows you to see how different parameters (such as population size, mutation rate, elitism rate, and generations) affect the algorithm's ability to find the shortest possible route through a set of cities.
 
 ### Features
 - Visualize the process of solving the TSP using a Genetic Algorithm.
