@@ -213,7 +213,7 @@ let fitnessChart = new Chart(document.getElementById('fitnessChart'), {
         datasets: [{
             label: 'Best Fitness (Shortest Path Distance)',
             data: [],
-            borderColor: '#ffffff',
+            borderColor: (localStorage.getItem('theme') === 'light') ? '#000000' : '#ffffff',
             fill: false,
             tension: 0.1
         }]
