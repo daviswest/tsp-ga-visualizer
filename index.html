@@ -63,18 +63,62 @@
     <div class="popup" id="popup">
       <div class="popup-content">
         <i class="fa-regular fa-circle-xmark" id="close-btn"></i>
-          <h2>TSP Genetic Algorithm Visualizer</h2>
-          <p>
-              This is a visualizer for the Genetic Algorithm applied to the Traveling Salesman Problem (TSP). It allows you to interactively simulate how the algorithm evolves through generations to find the shortest route that visits all given cities. 
-          </p>
-          <br>
-          <p>
-              The population size and mutation rate can be adjusted to see how they affect the convergence of the algorithm. The genetic algorithm works by selecting two parent routes, crossover to create offspring, and applying mutation to introduce diversity.
-          </p>
-          <br>
-          <p>
-              Feel free to create a pull request <a href="https://github.com/daviswest/tsp-ga-visualizer/pulls" target="_blank" title="View on Github" style="color: green;">here</a>. Create an issue to notify me about bugs or request features <a href="https://github.com/daviswest/tsp-ga-visualizer/issues" target="_blank" title="View on Github" style="color: green;">here</a>.
-          </p>
+        <h2>TSP Genetic Algorithm Visualizer</h2>
+        
+        <p><strong>What is the Traveling Salesman Problem (TSP)?</strong></p>
+        <p>
+          The <strong><a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem" target="_blank" title="See TSP on Wikipedia" style="color: green;">TSP</a></strong> is a problem in which a salesperson is given a list of points and the distances between them, and they must find the shortest route which visits all of the points and returns to the starting point.
+        </p>
+        </br>
+        <p><strong>What is the Genetic Algorithm (GA)?</strong></p>
+        <p>
+          A <strong>Genetic Algorithm (GA)</strong> is a method used to solve optimization problems like the TSP. It works by simulating natural selection. The algorithm, in our case, starts with a list of random routes (called the population of individuals), and over a certain number of generations, it evolves better solutions through processes inspired by biology. I have listed the biological processes that we will mimic below.
+        </p>
+        <ul>
+          <li><strong>Selection</strong>: Choosing the best solutions (parents) based on their fitness (how good the solution is).</li>
+          <li><strong>Crossover (Reproduction)</strong>: Mixing two parents to create new solutions (offspring).</li>
+          <li><strong>Mutation</strong>: Introducing small random changes to a solution to maintain diversity and explore new possibilities.</li>
+        </ul>
+        </br>
+        <p><strong>Settings You Can Adjust:</strong></p>
+        
+        <h3>1. Population Size</h3>
+        <p>
+          The <strong>population size</strong> is the number of solutions (routes) the algorithm works with at each generation.
+        </p>
+        <ul>
+          <li><strong>Larger populations</strong> mean more potential solutions to evolve, leading to a more diverse pool of candidates and better exploration of possible routes. However, it might slow down the algorithm because it requires more computation.</li>
+          <li><strong>Smaller populations</strong> are faster but may limit the variety of solutions and can result in premature convergence (getting stuck at suboptimal solutions too early).</li>
+        </ul>
+        
+        <h3>2. Mutation Rate</h3>
+        <p>
+          The <strong>mutation rate</strong> controls how often small random changes (mutations) happen in the solutions.
+        </p>
+        <ul>
+          <li><strong>Higher mutation rates</strong> introduce more diversity in the population, which can help avoid getting stuck in suboptimal solutions. However, it can also prevent the algorithm from stabilizing and converging to a good solution quickly.</li>
+          <li><strong>Lower mutation rates</strong> allow the algorithm to converge more quickly, but if the rate is too low, it might miss better solutions because the population lacks enough diversity to explore new possibilities.</li>
+        </ul>
+        
+        <h3>3. Generations</h3>
+        <p>
+          A <strong>generation</strong> is one complete cycle of the algorithm, where new solutions are created, mutated, and selected for the next cycle.
+        </p>
+        <ul>
+          <li><strong>More generations</strong> give the algorithm more time to evolve and refine solutions, potentially leading to better results. However, more generations also mean the algorithm will take longer to finish.</li>
+          <li><strong>Fewer generations</strong> speed up the process but may result in less optimal solutions.</li>
+        </ul>
+        
+        <h3>4. Elitism</h3>
+        <p>
+          <strong>Elitism</strong> ensures that the best solutions (the "elite") from one generation are carried over to the next generation unchanged.
+        </p>
+        <ul>
+          <li><strong>With elitism</strong>, the best solutions are preserved, helping the algorithm converge faster by ensuring the most fit individuals always survive. However, too much elitism can reduce diversity, making the algorithm more likely to get stuck in a local optimum.</li>
+          <li><strong>Without elitism</strong>, solutions change more drastically, which can introduce fresh ideas but risks losing the best solutions found so far.</li>
+        </ul>
+        <h3>Contribute</h3>
+        <p>This project was created by Davis West and is open source under the MIT License. Please feel free to fork, make changes, and submit a pull request on <a href="https://github.com/daviswest/tsp-ga-visualizer" target="_blank" title="View on Github" style="color: green; font-size: 20px;">GitHub</a>.</p>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
